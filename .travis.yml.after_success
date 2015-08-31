@@ -1,0 +1,13 @@
+#!/bin/bash
+set -x
+
+# exit if TRAVIS_TAG is empty, no need to release anything
+if [ -z "${TRAVIS_TAG}" ]; then
+  exit 0
+fi
+
+cd ${HOME}/x-tools
+
+last_build=$(ls -1dt */ | head -1)
+mv ${last_build%/} toolchain-${TRAVIS_TAG}
+tar vczf toolchain-${TRAVIS_TAG}.tar.gz --totals toolchain-${TRAVIS_TAG}
