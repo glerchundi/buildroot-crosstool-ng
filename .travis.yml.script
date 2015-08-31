@@ -3,8 +3,8 @@ set -x
 
 cd ${HOME}
 
-DEFCONFIG=${TRAVIS_BUILD_DIR}/crosstool-ng.conf ct-ng defconfig
-CT_ALLOW_BUILD_AS_ROOT_SURE=LOL ct-ng build
+DEFCONFIG=${TRAVIS_BUILD_DIR}/crosstool-ng.conf ${HOME}/crosstool-ng/bin/ct-ng defconfig
+CT_ALLOW_BUILD_AS_ROOT_SURE=LOL ${HOME}/crosstool-ng/bin/ct-ng build
 
 cd ${HOME}/x-tools
 
