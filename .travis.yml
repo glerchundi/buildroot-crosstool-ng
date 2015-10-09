@@ -34,6 +34,6 @@ deploy:
     - $HOME/x-tools/toolchain-*.tar.gz
   file_glob: true
   on:
-    repo: glerchundi/buildroot-crosstool-ng
+    repo: saltosystems/buildroot-crosstool-ng
     branch: master
     tags: true
