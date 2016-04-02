@@ -19,6 +19,7 @@ addons:
     - libexpat1-dev
     - subversion
     - gnupg
+    - help2man
 install:
   - bash -e ${TRAVIS_BUILD_DIR}/.travis.yml.install
 script:

@@ -1,7 +1,7 @@
 FROM ubuntu:14.04.2
 MAINTAINER Alex McLain <alex@alexmclain.com>
 
-ENV CROSSTOOL crosstool-ng-1.21.0
+ENV CROSSTOOL crosstool-ng-1.22.0
 
 RUN apt-get -qq update
 RUN apt-get -y install wget curl \
@@ -17,10 +17,11 @@ RUN apt-get -y install wget curl \
                        libncurses5-dev \
                        libexpat1-dev \
                        subversion \
-                       gnupg
+                       gnupg \
+                       help2man
 
 # Build
-ENV TRAVIS_TAG v1.0.0
+ENV TRAVIS_TAG v1.22.0.0
 ENV TRAVIS_BUILD_DIR /root
 
 COPY ./ ${TRAVIS_BUILD_DIR}

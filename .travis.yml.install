@@ -1,12 +1,12 @@
 #!/bin/bash
 set -x
 
-CROSSTOOL_VERSION=crosstool-ng-1.21.0
+CROSSTOOL_VERSION=crosstool-ng-1.22.0
 
 mkdir -p ${HOME}/src/${CROSSTOOL_VERSION}
 curl -s http://crosstool-ng.org/download/crosstool-ng/${CROSSTOOL_VERSION}.tar.bz2 | tar -xj -C ${HOME}/src
 
-cd ${HOME}/src/${CROSSTOOL_VERSION}
+cd ${HOME}/src/crosstool-ng
 ./configure --prefix=${HOME}/crosstool-ng
 make
 make install
